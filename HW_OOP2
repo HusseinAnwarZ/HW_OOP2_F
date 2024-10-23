@@ -1,0 +1,46 @@
+﻿
+car c = new car("BMW", "2024");
+c.Print();
+
+truck t = new truck("Merceds", "2025");
+t.Print();
+
+Console.ReadLine();
+
+
+class Vehicle
+{
+    public string Brand;
+
+}
+abstract class MotorVehicle:Vehicle
+{
+    public string modelName;
+    abstract public void Print();
+}
+class car:MotorVehicle
+{
+    public car(string brand, string ModelName)
+    {
+        Brand = brand;
+        modelName = ModelName;
+    }
+    public override void Print()
+    {
+        Console.WriteLine("brand car"+Brand);
+        Console.WriteLine("model car" + modelName);
+    }
+}
+class truck:MotorVehicle
+{
+    public truck(string brand, string ModelName)
+    {
+        Brand = brand;
+        modelName = ModelName;
+    }
+    public override void Print()
+    {
+        Console.WriteLine("brand truck" + Brand);
+        Console.WriteLine("model truck" + modelName);
+    }
+}
